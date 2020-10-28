@@ -892,7 +892,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_1 = new lib.CTA();
 	this.instance_1.setTransform(71,194,1,1,0,0,0,0,10);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(167).to({regX:0.1,regY:10.1,scaleX:1.08,scaleY:1.08,x:70.95,y:194.05},2).to({regX:0,regY:10,scaleX:1,scaleY:1,x:71,y:194},3).wait(20));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(167).to({regX:0.2,regY:10.1,scaleX:1.12,scaleY:1.12},2).to({regX:0,regY:10,scaleX:1,scaleY:1},5).wait(18));
 
 	// HEAD1a
 	this.instance_2 = new lib.HEAD1a();
@@ -961,7 +961,7 @@ lib.properties = {
 	color: "#333333",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/IFM_Display_Covid_300x250_atlas_P_1.png?1603915930070", id:"IFM_Display_Covid_300x250_atlas_P_1"}
+		{src:"images/IFM_Display_Covid_300x250_atlas_P_1.png?1603916472572", id:"IFM_Display_Covid_300x250_atlas_P_1"}
 	],
 	preloads: []
 };
