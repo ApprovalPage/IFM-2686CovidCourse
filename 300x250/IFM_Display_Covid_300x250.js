@@ -796,6 +796,31 @@ if (reversed == null) { reversed = false; }
 }).prototype = getMCSymbolPrototype(lib.BKGD, new cjs.Rectangle(-150,-125,300,250), null);
 
 
+(lib.maskbkgd = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.instance = new lib.BKGD();
+	this.instance.setTransform(5,5);
+
+	this.instance_1 = new lib.BKGD();
+	this.instance_1.setTransform(-5,-5);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance}]}).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.maskbkgd, new cjs.Rectangle(-155,-130,310,260), null);
+
+
 (lib.Logo = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -860,18 +885,14 @@ if (reversed == null) { reversed = false; }
 	// LOGO
 	this.instance = new lib.Logo();
 	this.instance.setTransform(216.05,196.55,0.96,0.96,0,0,0,0.1,0.1);
-	this.instance.alpha = 0;
-	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(143).to({_off:false},0).to({alpha:1},10).wait(39));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(192));
 
 	// CTA
 	this.instance_1 = new lib.CTA();
 	this.instance_1.setTransform(71,194,1,1,0,0,0,0,10);
-	this.instance_1.alpha = 0;
-	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(167).to({_off:false},0).to({alpha:1},10).wait(15));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(167).to({regX:0.1,regY:10.1,scaleX:1.08,scaleY:1.08,x:70.95,y:194.05},2).to({regX:0,regY:10,scaleX:1,scaleY:1,x:71,y:194},3).wait(20));
 
 	// HEAD1a
 	this.instance_2 = new lib.HEAD1a();
@@ -897,25 +918,35 @@ if (reversed == null) { reversed = false; }
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(95).to({_off:false},0).to({alpha:1},10).wait(87));
 
-	// spray copy
-	this.instance_5 = new lib.CovidSpray_1();
-	this.instance_5.setTransform(-433.5,164.5,1,1,0,0,0,-488.5,0);
-	this.instance_5.filters = [new cjs.ColorFilter(0, 0, 0, 1, 255, 255, 255, 0)];
-	this.instance_5.cache(-1954,-615,1958,1230);
+	// mask-bkgd
+	this.instance_5 = new lib.maskbkgd();
+	this.instance_5.setTransform(155,130);
+	this.instance_5.alpha = 0.3008;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).to({x:161.3,y:44.5},191).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).to({alpha:0},95).wait(97));
+
+	// spray copy
+	this.instance_6 = new lib.CovidSpray_1();
+	this.instance_6.setTransform(-433.5,164.5,1,1,0,0,0,-488.5,0);
+	this.instance_6.filters = [new cjs.ColorFilter(0, 0, 0, 1, 255, 255, 255, 0)];
+	this.instance_6.cache(-1954,-615,1958,1230);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_6).to({x:161.3,y:44.5},191,cjs.Ease.quadIn).wait(1));
 
 	// spray
-	this.instance_6 = new lib.CovidSpray_1();
-	this.instance_6.setTransform(-393.5,124.5,1,1,0,0,0,-488.5,0);
+	this.instance_7 = new lib.CovidSpray_1();
+	this.instance_7.setTransform(-393.5,124.5,1,1,0,0,0,-488.5,0);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_6).to({x:201.3,y:244.5},191).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_7).to({x:201.3,y:244.5},191,cjs.Ease.quadIn).wait(1));
 
 	// bkgd
-	this.instance_7 = new lib.BKGD();
-	this.instance_7.setTransform(150,125);
+	this.instance_8 = new lib.BKGD();
+	this.instance_8.setTransform(160,135);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(192));
+	this.instance_9 = new lib.BKGD();
+	this.instance_9.setTransform(150,125);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_9},{t:this.instance_8}]}).wait(192));
 
 	this._renderFirstFrame();
 
@@ -930,7 +961,7 @@ lib.properties = {
 	color: "#333333",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/IFM_Display_Covid_300x250_atlas_P_1.png?1603839874819", id:"IFM_Display_Covid_300x250_atlas_P_1"}
+		{src:"images/IFM_Display_Covid_300x250_atlas_P_1.png?1603915930070", id:"IFM_Display_Covid_300x250_atlas_P_1"}
 	],
 	preloads: []
 };
