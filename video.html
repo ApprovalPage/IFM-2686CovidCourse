@@ -8,6 +8,24 @@ div {
 	display: block; 
 }
 </style>
+
+<!-- video section styles -->
+<style>
+  * {
+    /* margin: 0; */
+    /* padding: 0; */
+  }
+  section {
+    width: 95%;
+    max-width: 50em;
+    margin: 0 auto;
+    padding: 1em 0;
+  }
+  video {
+    width: 100%;
+  }
+</style>
+
 <script>
 function includeHTML() {
   var z, i, elmnt, file, xhttp;
@@ -38,7 +56,7 @@ function includeHTML() {
 };
 </script>
 
-<!-- v2 -->
+
 </head>
 
 <body>
@@ -49,15 +67,18 @@ function includeHTML() {
 includeHTML();
 </script>
 
-
 <hr />
-<p><font face="Arial, Helvetica, sans-serif">300x250</font></p>
+<p><font face="Arial, Helvetica, sans-serif">Facebook/LinkedIn Social video</font></p>
 
 <div>	
 
-	<p>
-	<iframe src="SignUp/300x250/IFM_Display_Covid_300x250.html" width="300" height="250" style="border:none;"></iframe>
-	</p>
+<section>
+  <!-- Video Tag - controls is required -->
+  <video controls>
+    <!-- Replace with your mp4-->
+    <source src="IFM2686_CovidCourse_Social.mp4" type="video/mp4">
+  </video>
+</section>
 
 <p></p>
 <hr />
