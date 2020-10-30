@@ -1222,7 +1222,7 @@ if (reversed == null) { reversed = false; }
 
 	// HEAD2
 	this.instance_5 = new lib.HEAD2();
-	this.instance_5.setTransform(80,216.75);
+	this.instance_5.setTransform(80,204.75);
 	this.instance_5.alpha = 0;
 	this.instance_5._off = true;
 
@@ -1261,7 +1261,7 @@ lib.properties = {
 	color: "#333333",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/IFM_Display_Covid_160x600_atlas_P_1.png?1603998870324", id:"IFM_Display_Covid_160x600_atlas_P_1"}
+		{src:"images/IFM_Display_Covid_160x600_atlas_P_1.png?1604016896939", id:"IFM_Display_Covid_160x600_atlas_P_1"}
 	],
 	preloads: []
 };
